@@ -8,7 +8,8 @@ in the open on this repo's [issue tracker](../../issues).
 
 ## What it aims to be
 
-- A sidebar browser: tabs on the left, organised into spaces, folders and groups.
+- A sidebar browser: tabs on the left, organised into spaces, with favorites and
+  nested folders of pinned tabs.
 - Profiles, so each space can use its own cookies and logins.
 - Configurable expiry for tabs you haven't pinned.
 - Everything you arrange (settings, spaces, pinned tabs, colors) stored as plain
