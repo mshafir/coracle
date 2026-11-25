@@ -21,8 +21,12 @@ The address a pinned tab or favorite was kept at and returns to. Browsing away f
 _Avoid_: Pinned URL, original URL
 
 **Asleep**:
-The state of a pinned tab or favorite whose page is not loaded. It stays in the sidebar and wakes at its home URL.
+The state of a tab whose page is not loaded while its entry stays in the sidebar. Any tab falls asleep after going unviewed for a while; a pinned tab or favorite also falls asleep when closed.
 _Avoid_: Closed, unloaded, suspended, discarded
+
+**Drifted**:
+The state of a pinned tab or favorite that is showing a page other than its home URL.
+_Avoid_: Navigated away, dirty, modified
 
 **Folder**:
 A named container for pinned tabs inside a space. A folder may contain other folders. Folders hold only pinned tabs; unpinned tabs are never grouped.
@@ -41,8 +45,16 @@ A tab that is open in a space but not kept. It belongs to the space rather than 
 _Avoid_: Temporary tab, today tab
 
 **Expiry**:
-The automatic removal of an unpinned tab after a configured period.
-_Avoid_: Archiving, auto-close, cleanup
+The automatic move of an unpinned tab into the archive once it has gone unviewed for the expiry period.
+_Avoid_: Auto-close, auto-archive, cleanup
+
+**Expiry period**:
+How long a tab may go unviewed before expiry. There is one global period, which a space may replace with its own.
+_Avoid_: Timeout, lifetime, TTL
+
+**Archive**:
+A space's list of unpinned tabs that have left the sidebar, whether by expiry or by being closed, from which they can be reopened for a limited time. It exists only on the machine it was built on.
+_Avoid_: Recently closed, expired tabs, trash, history
 
 **Space file**:
 The single file that is a space: its name, appearance, profile link and durable layout. Opening a space file opens that space.
