@@ -223,7 +223,7 @@ Many behaviours above are tied to recent versions (2.1.199, 2.1.248, 2.1.259, 2.
 Claude Code 2.1.332, macOS, claude.ai subscription login, in an empty scratch directory. No credential or token file was read.
 
 1. `claude --help` and `claude mcp --help`.
-2. Seven launches that sent **no prompt**, only `initialize` and `mcp_status` control requests, so no model request was made. Compared: default; `--setting-sources ""`; `--restricted`; `--restricted --tools ""`; `--setting-sources "" --strict-mcp-config`. Read: which hooks fired, command count, and MCP servers by kind (connector, plugin, Coracle stub).
+2. Several launches that sent **no prompt**, only `initialize` and `mcp_status` control requests, so no model request was made. Compared: default; `--setting-sources ""`; `--restricted`; `--restricted --tools ""`; `--setting-sources "" --strict-mcp-config`. Read: which hooks fired, command count, and MCP servers by kind (connector, plugin, Coracle stub).
 3. One two-turn session on the smallest model with `--tools "" --setting-sources "" --strict-mcp-config --mcp-config <stub> --permission-prompt-tool stdio --append-system-prompt … --session-id …`. The stub server offered `read_page` and `run_script`. The driver allowed the first and denied the second, then sent a follow-up message.
 4. One session with `--resume` on that id in a fresh process: a recall question, then an `interrupt` control request during a tool-calling turn.
 5. One single-turn session with no MCP server to read the plugin and tool lists.
